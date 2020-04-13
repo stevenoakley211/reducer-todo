@@ -18,13 +18,13 @@ export const todoReducer = (state,action) => {
             }
         ]
         // If the action.type = TOGGLE_FINISHED.
-        case 'TOGGLE_FINISHED':
+        case 'TOGGLE_FINISHED' :
             // return a copy of the state that has the item (that matches the action.id passed in) with its completed status changed.
-            return state.map(todo => todo.id ===action.id ? {...todo, completed: !todo.completed} :todo)
+            return state.map(todo => todo.id === action.id ? {...todo, completed: !todo.completed} :todo)
             //If the action.type = REMOVE_FINISHED  
         case 'REMOVE_FINISHED' :
             // Return a copy of the state that has had tasks that were completed filtered out
-            return state.filter( todo=> !todo.copleted)
+            return state.filter( todo => !todo.completed)
         default:
             return state;    
     }
