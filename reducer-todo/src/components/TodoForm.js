@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {Button} from '../styles'
 const TodoForm = (props) => {
     const [newTodoTask, setNewTodoTask] = useState("")
 
@@ -28,8 +28,8 @@ const TodoForm = (props) => {
                     value={newTodoTask}
                     onChange={changeHandler}
                 />
-                <button onClick={handleAddNewTodo}>ADD</button>
-                <button onClick={clearCompleted}>CLEAR</button>
+                <Button onClick={handleAddNewTodo}>ADD</Button>
+                <Button onClick={clearCompleted}>CLEAR</Button>
             </form>
         </div>
     )

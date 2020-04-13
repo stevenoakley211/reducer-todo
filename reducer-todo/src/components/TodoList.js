@@ -6,7 +6,7 @@ const TodoList =(props) => {
         props.dispatch({type :"TOGGLE_FINISHED", id:id})
     }
     return (
-        <ul>
+        <ol>
             {props.state.map( task => (
                 <Todo 
                     id={task.id}
@@ -14,7 +14,7 @@ const TodoList =(props) => {
                     toggleFinished={toggleFinished}
                 />
             ))}
-        </ul>
+        </ol>
     )
 }
 export default TodoList

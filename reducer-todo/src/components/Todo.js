@@ -1,12 +1,12 @@
 import React from 'react'
-
+import {CheckBox,Li} from '../styles'
 const Todo = (props) => {
 
     return (
-        <li>
+        <Li>
             {props.title}
-            <input type='checkbox' onClick={() => props.toggleFinished(props.id)}/>
-        </li>
+            <CheckBox type='checkbox' onClick={() => props.toggleFinished(props.id)}/>
+        </Li>
     )
 }
 export default Todo
